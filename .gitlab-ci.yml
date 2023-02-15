@@ -1,0 +1,41 @@
+#edited version of gitlab autodevops
+image: docker
+
+variables: 
+    KUBE_INGRESS_BASE_DOMAIN: "kubernetes.snapscams.com"
+
+stages: 
+- build
+- test
+- dast
+- deploy
+
+services: 
+  - docker:dind
+
+dast:
+  stage: dast
+
+build: 
+  stage: build
+  script: 
+    - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker build -t $CI_REGISTRY/snapscams/snapscams-be-api/$CI_COMMIT_SHORT_SHA:latest .
+    - docker push $CI_REGISTRY/snapscams/snapscams-be-api/$CI_COMMIT_SHORT_SHA:latest
+
+deploy: 
+  image: $CI_REGISTRY/vodcloud/ci-base/production:latest  
+  stage: deploy
+  script: 
+    - sed -i "s/<VERSION>/${CI_COMMIT_SHORT_SHA}/g" kubernetes.yaml
+    - kubectl apply --force -f kubernetes.yaml
+
+include:
+- template: Security/SAST.gitlab-ci.yml
+- template: Jobs/Code-Quality.gitlab-ci.yml 
+- template: Jobs/Code-Intelligence.gitlab-ci.yml
+- template: Security/DAST.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Security/DAST.gitlab-ci.yml
+#- template: Security/Container-Scanning.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Security/Container-Scanning.gitlab-ci.yml
+- template: Security/Dependency-Scanning.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Security/Dependency-Scanning.gitlab-ci.yml
+- template: Security/License-Scanning.gitlab-ci.yml
+- template: Security/Secret-Detection.gitlab-ci.yml

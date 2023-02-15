@@ -1,0 +1,48 @@
+#kubbernetes deployment to deploy nodejs docker container to kubbernetes
+apiVersion: v1
+kind: Service
+metadata:
+  name: snapscams-be-api
+  namespace: snapscams
+spec:
+  selector:
+    app: snapscams-be-api
+  ports:
+  - protocol: "TCP"
+    port: 3050
+    targetPort: 3050
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snapscams-be-api
+  namespace: snapscams
+spec:
+  selector:
+    matchLabels:
+      app: snapscams-be-api
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: snapscams-be-api
+    spec:
+      containers:
+      - name: snapscams-be-api
+        image: registry.gitlab.com/snapscams/snapscams-be-api/<VERSION>:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3050
+        livenessProbe:
+          tcpSocket:
+            port: 3050
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        env: 
+        - name: ATLAS_URI
+          value: mongodb://twitch1:pfqEvHHvj8Xc5FzH@mongo1.jumpstartlabs.co:27017/?tls=true
+      imagePullSecrets:
+      - name: gitlab-auth
