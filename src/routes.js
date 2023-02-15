@@ -1,7 +1,7 @@
 import Home from "views/pages/Home.js";
-import Post from "views/pages/Post.js";
 import IndexView from "views/Index.js";
 import EditProfile from "views/pages/EditProfile";
+import Post from "views/pages/Post.js";
 
 const routes = [
   {
