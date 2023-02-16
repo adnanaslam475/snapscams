@@ -114,21 +114,21 @@ var mysql = require("mysql");
 //   database: 'basdb'
 // });
 
-let connection = mysql.createConnection({
-  connectionLimit: 100,
-  host: "ecominder.mobi",
-  port: 8087,
-  user: "point",
-  password: "aWHHyKKbnDpfny3H",
-  database: "basdb",
-});
+// let connection = mysql.createConnection({
+//   connectionLimit: 100,
+//   host: "ecominder.mobi",
+//   port: 8087,
+//   user: "point",
+//   password: "aWHHyKKbnDpfny3H",
+//   database: "basdb",
+// });
 
-connection.connect(function (err) {
-  if (err) {
-    return console.error("sql connection error:----------> " + err.message);
-  }
-  console.log("Connected to the MySQL server.");
-});
+// connection.connect(function (err) {
+//   if (err) {
+//     return console.error("sql connection error:----------> " + err.message);
+//   }
+//   console.log("Connected to the MySQL server.");
+// });
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
