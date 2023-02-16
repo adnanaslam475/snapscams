@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
   "main": "index.js",
+  "engines": {
+    "node": "17.3.0"
+  },
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node index.js",
