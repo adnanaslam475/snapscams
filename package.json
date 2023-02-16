@@ -7,12 +7,10 @@
     "node": "17.3.0"
   },
   "scripts": {
-    "client-install": "npm install --prefix client",
     "start": "node index.js",
     "server": "nodemon index.js",
     "format": "prettier --single-quote --check .",
-    "swagger-autogen": "node ./swagger.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "swagger-autogen": "node ./swagger.js"
   },
   "repository": {
     "type": "git",
