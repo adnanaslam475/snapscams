@@ -1,0 +1,27 @@
+.wlcm-row {
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  align-self: center;
+  align-items: center;
+}
+
+.wlcm {
+  /* text-align: center; */
+  color: white;
+}
+.wlcm > * {
+  color: white;
+}
+
+.navbar-top {
+  min-width: -webkit-fill-available;
+}
+
+.react-swipeable-view-container div {
+  overflow: unset;
+  height: 100%;
+}
+div[data-swipeable="true"] {
+  overflow: unset !important;
+}

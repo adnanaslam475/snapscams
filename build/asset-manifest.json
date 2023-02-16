@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b3cb8e80.css",
+    "main.js": "/static/js/main.3701c1c5.js",
+    "static/media/login_back.svg": "/static/media/login_back.08ef9edcf2b1d8646a4e.svg",
+    "static/media/fa-solid-900.svg": "/static/media/fa-solid-900.13de59f1a36b6cb4bca0.svg",
+    "static/media/dashboard.svg": "/static/media/dashboard.31dfc9a26948414f4dbdc3a774cca537.svg",
+    "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.216edb96b562c79adc09.svg",
+    "static/media/fa-solid-900.eot": "/static/media/fa-solid-900.efbd5d20e407bbf85f2b.eot",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.07c3313b24f7b1ca85ee.ttf",
+    "static/media/fa-regular-400.svg": "/static/media/fa-regular-400.19e27d348fefc21941e0.svg",
+    "static/media/fa-brands-400.eot": "/static/media/fa-brands-400.89a52ae1d02b86d61439.eot",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.9e138496e8f1719c6ebf.ttf",
+    "static/media/nucleo-icons.svg": "/static/media/nucleo-icons.01ebecaf50461162d4bc.svg",
+    "static/media/fa-solid-900.woff": "/static/media/fa-solid-900.c6ec080084769a6d8a34.woff",
+    "static/media/fa-brands-400.woff": "/static/media/fa-brands-400.329a95a9172fdb2cccb4.woff",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.ada6e6df937f7e5e8b79.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c1210e5ebe4344da5083.woff2",
+    "static/media/fa-regular-400.eot": "/static/media/fa-regular-400.4079ae2d2a15d0689568.eot",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.1017bce89c72f95bcf8e.ttf",
+    "static/media/argon-react.png": "/static/media/argon-react.128d71d316a8e92aff4a.png",
+    "static/media/nucleo-icons.eot": "/static/media/nucleo-icons.19abb5402a664606b14c.eot",
+    "static/media/nucleo-icons.ttf": "/static/media/nucleo-icons.d6a66724e7a7bf1bba65.ttf",
+    "static/media/fa-regular-400.woff": "/static/media/fa-regular-400.3672264812746c3c7225.woff",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.68c5af1f48e2bfca1e57.woff2",
+    "static/media/nucleo-icons.woff": "/static/media/nucleo-icons.c82c9b7c40130b7116d3.woff",
+    "static/media/nucleo-icons.woff2": "/static/media/nucleo-icons.cba267483aa6a7cb6e33.woff2",
+    "static/media/Settings.svg": "/static/media/Settings.820684a1a10a13fa8d20.svg",
+    "static/media/Search.svg": "/static/media/Search.903f7761c3b673b2ed4f.svg",
+    "static/media/Add.svg": "/static/media/Add.e2a56248abe74209cb3c.svg",
+    "static/media/google.svg": "/static/media/google.eae9aa9354350126d1b032847835a051.svg",
+    "static/media/github.svg": "/static/media/github.6c95555646a0ecabf549179c97bf0e7d.svg",
+    "static/media/DashboardLayout.svg": "/static/media/DashboardLayout.9dc16ece9dc3b3ad2e00.svg",
+    "static/media/Picture.svg": "/static/media/Picture.d21ac385b2faad2e3a892ff826067a58.svg",
+    "static/media/VideoCall.svg": "/static/media/VideoCall.8d2e61274ef5fbf35cd74d64cba00751.svg",
+    "index.html": "/index.html",
+    "static/media/profile.svg": "/static/media/profile.a51bcb04e4d66e77cd9153bbf7648bde.svg"
+  },
+  "entrypoints": [
+    "static/css/main.b3cb8e80.css",
+    "static/js/main.3701c1c5.js"
+  ]
+}

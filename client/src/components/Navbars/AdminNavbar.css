@@ -1,0 +1,31 @@
+.async_select {
+  width: 500px;
+  border: none !important;
+}
+
+.async_select .css-319lph-ValueContainer {
+  height: 57px;
+}
+
+.async_select .css-1hb7zxy-IndicatorsContainer span {
+  display: none;
+}
+
+.async_select .css-1hb7zxy-IndicatorsContainer {
+  display: none;
+}
+#react-select-2-input::before {
+  background-image: url(../../assets/img/icons/common/Search.svg);
+  width: 90px;
+}
+#react-select-2-listbox {
+  overflow: hidden;
+  border-radius: 15px;
+}
+#react-select-2-listbox .css-496j0t-option {
+  background-color: #5e72e4 !important;
+  color: white;
+}
+#react-select-2-listbox .css-1gypth9-option{
+  background-color: #5e72e4 !important;
+}

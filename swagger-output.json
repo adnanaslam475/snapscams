@@ -1,0 +1,430 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Jobs API Documentation",
+    "description": "Details about the BE API we use to manage snapscams. ",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3050",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/scams/create": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "example": "any"
+                },
+                "timeReported": {
+                  "example": "any"
+                },
+                "ip": {
+                  "example": "any"
+                },
+                "scammerUsername": {
+                  "example": "any"
+                },
+                "scamTime": {
+                  "example": "any"
+                },
+                "comments": {
+                  "example": "any"
+                },
+                "media": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "scamType": {
+                  "example": "any"
+                },
+                "title": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/scams/get": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "username",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scammerUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/scams/delete": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/scams/get/latest": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/scams/update/status": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "example": "any"
+                },
+                "id": {
+                  "example": "any"
+                },
+                "_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/comments/create": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "commentTitle": {
+                  "example": "any"
+                },
+                "commentBody": {
+                  "example": "any"
+                },
+                "commenterUsername": {
+                  "example": "any"
+                },
+                "scamId": {
+                  "example": "any"
+                },
+                "commentTime": {
+                  "example": "any"
+                },
+                "scammerUsername": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/comments/get": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "commentID",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scamID",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "commenterUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scammerUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/upvotes/create": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "scamId": {
+                  "example": "any"
+                },
+                "scammerUsername": {
+                  "example": "any"
+                },
+                "upvoteUsername": {
+                  "example": "any"
+                },
+                "upvote": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/upvotes/get": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scammerUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "upvoteUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scamId",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/analytics/upvotes": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "scammerUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "upvoteUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scamId",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "upvote",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/analytics/scam/username": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scammerUsername",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/analytics/comments": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scammerUsername",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "scamId",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  }
+}
