@@ -1,0 +1,95 @@
+.scm {
+  background-color: #e9ecef !important;
+  color: black;
+}
+.circle{
+  margin: auto;
+}
+.scm > * {
+  background-color: #e9ecef !important;
+  color: black;
+}
+.h-70 {
+  height: 70px;
+}
+.scm::-moz-focus-inner {
+  background-color: #e9ecef;
+}
+.scm:focus {
+  background-color: #e9ecef;
+}
+.select2-container > * {
+  background-color: #e9ecef !important;
+}
+.react-select .css-319lph-ValueContainer {
+  height: 60px;
+}
+.react-select .css-1s2u09g-control {
+  border-radius: 10px;
+}
+
+.react-select .css-1s2u09g-control:hover {
+  border-radius: 10px;
+}
+
+.react-select .css-1hb7zxy-IndicatorsContainer span {
+  display: none;
+}
+.react-select > * {
+  background-color: #e9ecef !important;
+}
+.upload-btn {
+  width: 100px;
+  height: 50px;
+  background-color: #5e72e4;
+  color: white;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+.btn-submit {
+  height: 80px;
+  width: 250px;
+  color: white;
+  border-radius: 20px;
+  background-color: black;
+  margin-top: 25px;
+}
+.datepicker {
+  border-radius: 20px !important;
+  background-color: #e9ecef;
+}
+
+.datepicker input {
+  border-radius: 20px !important;
+  height: 60px;
+  background-color: #e9ecef;
+}
+
+.dadada {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.tbl {
+  text-align: center;
+}
+.tbl > * {
+  text-transform: uppercase;
+}
+.card {
+  border-radius: 2.2rem;
+}
+.react-table-row {
+  height: 70px !important;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.react-table-row:hover {
+  /* background-color: rgb(246, 246, 246); */
+}

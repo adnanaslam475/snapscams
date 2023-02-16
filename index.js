@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3050;
 const app = express();
 
 // defining an array to work as the database (temporary solution)
-const ads = [{ title: "Hello, world (again)!" }];
+// const ads = [{ title: "Hello, world (again)!" }];
 
 // adding Helmet to enhance your API's security
 app.use(helmet());
@@ -116,22 +116,26 @@ var mysql = require("mysql");
 
 let connection = mysql.createConnection({
   connectionLimit: 100,
-  host: 'ecominder.mobi',
+  host: "ecominder.mobi",
   port: 8087,
-  user: 'point',
-  password: 'aWHHyKKbnDpfny3H',
-  database: 'basdb'
+  user: "point",
+  password: "aWHHyKKbnDpfny3H",
+  database: "basdb",
 });
 
 connection.connect(function (err) {
   if (err) {
-    return console.error('sql connection error:----------> ' + err.message);
+    return console.error("sql connection error:----------> " + err.message);
   }
-  console.log('Connected to the MySQL server.');
+  console.log("Connected to the MySQL server.");
 });
 
-
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 // starting the server
 dbo.connectToServer(function (err) {
   if (err) {
